@@ -1,0 +1,470 @@
+/* style.css */
+/* Remove margens e organiza o tamanho dos elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Configuração geral do site */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+}
+/* Rolagem suave ao clicar no menu */
+html {
+    scroll-behavior: smooth;
+}
+/* CABEÇALHO */
+.cabecalho {
+    width: 100%;
+    padding: 18px 7%;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+/* Logo no cabeçalho */
+.logo img {
+    width: 165px;
+    border-radius: 6px;
+}
+/* Menu */
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+/* Efeito do menu */
+.menu a:hover {
+    color: #e50914;
+}
+/* BANNER PRINCIPAL COM FOTO DA FACHADA */
+.banner {
+    min-height: 88vh;
+    background:
+      linear-gradient(rgba(0,0,0,0.60), rgba(0,0,0,0.80)),
+        url("../img/fachada.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 80px 7%;
+}
+/* Conteúdo do banner */
+.banner-conteudo {
+    max-width: 650px;
+}
+/* Título do banner */
+.banner h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+/* Texto do banner */
+.banner p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+/* Área dos botões */
+.botoes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+/* Botões do site */
+.botao {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 8px;
+}
+/* Botão vermelho */
+.vermelho {
+    background-color: #e50914;
+    color: white;
+}
+/* Botão transparente */
+.transparente {
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+}
+/* Efeito dos botões */
+.botao:hover {
+    transform: scale(1.05);
+}
+/* DIFERENCIAIS */
+.diferenciais {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    background-color: #151515;
+    padding: 35px 7%;
+}
+/* Cada diferencial */
+.diferenciais div {
+    border-left: 4px solid #e50914;
+    padding-left: 15px;
+}
+/* Título dos diferenciais */
+.diferenciais h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+/* Texto dos diferenciais */
+.diferenciais p {
+    color: #ccc;
+    font-size: 15px;
+}
+/* CONFIGURAÇÃO GERAL DAS SEÇÕES */
+section {
+    padding: 70px 7%;
+}
+/* Subtítulo pequeno vermelho */
+.subtitulo {
+    color: #e50914;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+/* Títulos principais */
+h2 {
+    text-align: center;
+    font-size: 38px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+/* SERVIÇOS */
+.servicos {
+    background-color: #101010;
+}
+/* Grade dos serviços */
+/* Grade dos serviços */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Card com imagem de fundo */
+.card {
+    height: 240px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid #e50914;
+    transition: 0.3s;
+}
+
+/* Camada escura por cima da foto */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.85));
+}
+
+/* Conteúdo do card */
+.card-conteudo {
+    position: absolute;
+    bottom: 0;
+    padding: 25px;
+    z-index: 1;
+}
+
+/* Título dos cards */
+.card h3 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+/* Texto dos cards */
+.card p {
+    color: #ddd;
+    line-height: 1.5;
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* Fotos de cada serviço */
+.servico-diagnostico {
+    background-image: url("../img/diagnostico.jpeg");
+}
+
+.servico-injecao {
+    background-image: url("../img/injecao.jpeg");
+}
+
+.servico-modulo {
+    background-image: url("../img/modulo.jpeg");
+}
+
+.servico-airbag {
+    background-image: url("../img/airbag.jpeg");
+}
+
+.servico-arcond {
+    background-image: url("../img/arcond.jpeg");
+}
+
+.servico-mecanica {
+    background-image: url("../img/mecanica.jpeg");
+}
+/* SOBRE RESUMIDO */
+.sobre-resumo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+    background-color: #151515;
+}
+/* Texto da seção sobre */
+.sobre-texto h2 {
+    text-align: left;
+}
+.sobre-texto .subtitulo {
+    text-align: left;
+}
+.sobre-texto p {
+    color: #ddd;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+/* Imagem do mecânico */
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 12px;
+    border-left: 6px solid #e50914;
+}
+/* GALERIA */
+.galeria {
+    background-color: #0d0d0d;
+}
+/* Fotos da galeria */
+.galeria-fotos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+/* Cada imagem da galeria */
+.galeria-fotos img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #222;
+}
+/* LOCALIZAÇÃO */
+.localizacao {
+    background-color: #151515;
+    text-align: center;
+}
+/* Texto da localização */
+.localizacao p {
+    font-size: 19px;
+    color: #ddd;
+    margin-bottom: 25px;
+}
+/* Mapa */
+.localizacao iframe {
+    border-radius: 10px;
+}
+/* CONTATO */
+.contato {
+    text-align: center;
+    background-color: #0d0d0d;
+}
+/* Textos de contato */
+.contato p {
+    color: #ddd;
+    font-size: 20px;
+    margin: 12px 0;
+}
+/* RODAPÉ */
+footer {
+    background-color: #000;
+    padding: 30px 7%;
+    text-align: center;
+}
+/* Logo do rodapé */
+footer img {
+    width: 140px;
+    margin-bottom: 15px;
+}
+/* Texto do rodapé */
+footer p {
+    color: #aaa;
+}
+/* BOTÃO FLUTUANTE DO WHATSAPP */
+.whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 65px;
+    height: 65px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+/* PÁGINA SOBRE */
+.pagina-sobre {
+    min-height: 80vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.9)),
+        url("../img/logo.jpg");
+    background-size: 95%;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Caixa do texto da página sobre */
+.pagina-sobre-conteudo {
+    max-width: 900px;
+    background-color: rgba(0,0,0,0.75);
+    padding: 45px;
+    border-radius: 12px;
+    border-left: 6px solid #e50914;
+    text-align: center;
+}
+/* Título da página sobre */
+.pagina-sobre h1 {
+    font-size: 42px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: #e50914;
+}
+/* Texto da página sobre */
+.pagina-sobre p {
+    font-size: 19px;
+    color: #ddd;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+/* RESPONSIVIDADE PARA TABLET */
+@media (max-width: 900px) {
+    .diferenciais {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .sobre-resumo {
+        grid-template-columns: 1fr;
+    }
+    .galeria-fotos {
+        grid-template-columns: 1fr;
+    }
+}
+/* RESPONSIVIDADE PARA CELULAR */
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 18px;
+    }
+    .menu {
+        text-align: center;
+    }
+    .menu a {
+        display: block;
+        margin: 10px 0;
+    }
+    .banner h1 {
+        font-size: 36px;
+    }
+    .banner p {
+        font-size: 17px;
+    }
+    .diferenciais {
+        grid-template-columns: 1fr;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    .logo img {
+        width: 145px;
+    }
+
+    .fotomortal{
+        height: 400px;
+    }
+}
+/* Botão voltar ao topo criado pelo JavaScript */
+.botao-topo {
+    display: none;
+    position: fixed;
+    right: 22px;
+    bottom: 95px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #e50914;
+    background-color: #111;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.botao-topo:hover {
+    background-color: #e50914;
+}
+
+.botao-avancar{
+    position: relative;
+    left: 55%;
+    top: 3px;
+    background-color:darkslategrey;
+    height: 40px;
+    width: 40px;
+    border-radius: 25%;
+}
+
+.botao-voltar{
+    position: relative;
+    top: 3px;
+    left: 40%;
+    height: 40px;
+    width: 40px;
+    border-radius: 25%;
+    background-color:darkslategrey;
+    border-color: darkslategrey;
+}
+
+
+.fotomortal {
+
+    height: 800px;
+}
