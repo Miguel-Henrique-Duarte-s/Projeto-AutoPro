@@ -388,8 +388,10 @@ footer p {
 /* RESPONSIVIDADE PARA CELULAR */
 @media (max-width: 600px) {
     .cabecalho {
+        position: absolute;
         flex-direction: column;
         gap: 18px;
+        height: fit-content;
     }
     .menu {
         text-align: center;
@@ -397,6 +399,10 @@ footer p {
     .menu a {
         display: block;
         margin: 10px 0;
+    }
+
+    .banner {
+        margin-top: 250px;
     }
     .banner h1 {
         font-size: 36px;
@@ -420,26 +426,6 @@ footer p {
     .fotomortal{
         height: 400px;
     }
-}
-/* Botão voltar ao topo criado pelo JavaScript */
-.botao-topo {
-    display: none;
-    position: fixed;
-    right: 22px;
-    bottom: 95px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid #e50914;
-    background-color: #111;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
-    z-index: 2000;
-}
-
-.botao-topo:hover {
-    background-color: #e50914;
 }
 
 .botao-avancar{
